@@ -1,7 +1,7 @@
 -- PART -A 
 -- 1.	Retrieve all unique departments from the STUDENT table.
 SELECT DISTINCT StuDepartment
-FROM STUDENT;
+FROM STUDENT;                                                  
 
 -- 2.	Insert a new student record into the STUDENT table.
 -- (9, 'Neha Singh', 'neha.singh@univ.edu', '9876543218', 'IT', '2003-09-20', 2021)
@@ -99,6 +99,12 @@ WHERE StudentID NOT IN (
     SELECT DISTINCT StudentID
     FROM ENROLLMENT
 );
+-- OR BY JOIN
+SELECT StuName 
+FROM STUDENT
+LEFT JOIN ENROLLMENT 
+ON STUDENT.StudentID = ENROLLMENT.StudentID 
+WHERE CourseID IS NULL ;
 
 -- 19.	Display course name having second highest credit. (COURSE table)
 

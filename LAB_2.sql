@@ -46,7 +46,7 @@ AS
 BEGIN
     UPDATE STUDENT
     SET StuEmail = @StuEmail,
-        StuPhone = @StuPhone
+        StuPhone = @StuPhone 
     WHERE StudentID = @StudentID;
 END;
 GO
